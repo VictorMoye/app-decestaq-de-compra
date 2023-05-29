@@ -1,5 +1,5 @@
 
-import { StatusBar, StyleSheet, Text, View } from 'react-native';
+import { StatusBar, View } from 'react-native';
 import Cestas from './src/Telas/Cestas';
 
 export default function App() {
