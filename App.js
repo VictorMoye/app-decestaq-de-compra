@@ -1,9 +1,10 @@
 
 import { StatusBar, View, SafeAreaView } from 'react-native';
-import Cestas from './src/Telas/Cestas';
+import Cestas from './src/telas/Cestas';
 import { useFonts, 
   Montserrat_400Regular,
   Montserrat_700Bold} from '@expo-google-fonts/montserrat';
+  
 export default function App() {
   const [fonteCarregada] = useFonts({
     "MontserratRegular": Montserrat_400Regular,
