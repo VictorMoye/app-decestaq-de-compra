@@ -2,25 +2,27 @@ import React from 'react';
 import { StyleSheet,Image, Dimensions, Text, View } from 'react-native';
 import topo from '../../assets/topo.png';
 import logo from '../../assets/logo.png';
-//import { View } from 'react-native-web';
+import Texto from '../componentes/Texto';
 
 const width = Dimensions.get('screen').width
 
 export default function Cestas(){
     return <>    
-    <Image source={topo}  style = {estilos.topo}/>
-    <Text style= {estilos.titulo }>Detalhe da Cestas</Text>
+    <Texto style= {estilos.titulo}>Detalhe da Cestas </Texto>
+    <Image source={topo}  style={estilos.topo}/>
+    
+    
     <View style = {estilos.cestas}>
-       <Text style = {estilos.nome}>Cestas de verduras</Text>  
+       <Texto style={estilos.nome}>Cestas de verduras</Texto>  
        <View style={estilos.Fazendinha}>
         <Image source={logo} style = {estilos.imagemFazenda}></Image>
-    <Text style = {estilos.fazenda}>Jenny Jack Farm</Text>
+    <Texto style = {estilos.fazenda}>Jenny Jack Farm</Texto>
     </View>
-    <Text style = {estilos.Descricao}>Uma cesta de produtos selecionados 
+    <Texto style = {estilos.Descricao}>Uma cesta de produtos selecionados 
         cuidadozamente da 
         fazenda direto pra 
-        cozinha</Text>
-        <Text style = {estilos.preco}>R$ 40,00</Text>
+        cozinha</Texto>
+        <Texto style = {estilos.preco}>R$ 40,00</Texto>
     </View>    
     </> 
 }
@@ -31,6 +33,7 @@ const estilos =  StyleSheet.create({
         height: 578 / 768 * width,
 },
     titulo: {
+        width: "100%",
         position: "absolute", 
         textAlign: "center",
         fontSize: 16,
@@ -45,15 +48,14 @@ const estilos =  StyleSheet.create({
     },
     nome: {
         color: "#464646",
-        fontSize: 26,
+        fontSize: 32,
         lineHeight: 42,
-        fontFamily: 'MontserratBold',
+        fontWeight: "bold",
     },
     fazenda: {
         fontSize: 16,
         lineHeight: 26,
         marginLeft: 12,
-        fontFamily: 'MontserratRegular',
     },
     Descricao: {        
         color: "#A3A3A3",
